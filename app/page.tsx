@@ -7,7 +7,11 @@ const giveUrl = 'https://pushpay.com/g/wyppnj';
 const cities = ['Toronto', 'Ottawa', 'London', 'Accra', 'Kumasi', 'Amsterdam', 'Dublin', 'Dallas', 'New Jersey', 'Boston', 'Chicago', 'Orlando', 'Brooklyn', 'Atlanta'];
 
 function Arrow() {
-  return <span aria-hidden="true">↗</span>;
+  return <span className="arrowIcon" aria-hidden="true" />;
+}
+
+function Spark() {
+  return <i className="sparkIcon" aria-hidden="true" />;
 }
 
 export default function Home() {
@@ -51,14 +55,14 @@ export default function Home() {
           </div>
           <div className="heroBottom">
             <p>Igniting a generation to seek God, carry revival, and transform cities around the world.</p>
-            <a className="circleLink" href="#movement" aria-label="Explore the movement">↓</a>
+            <a className="circleLink" href="#movement" aria-label="Explore the movement"><span className="downIcon" aria-hidden="true" /></a>
           </div>
         </div>
         <div className="cityStrip" aria-label="Cities reached by WYPP">
           <div className="marqueeTrack">
             {[0, 1].map((copy) => (
               <div className="marqueeGroup" aria-hidden={copy === 1} key={copy}>
-                {cities.map((city) => <span key={city}>{city}<i>✦</i></span>)}
+                {cities.map((city) => <span key={city}>{city}<Spark /></span>)}
               </div>
             ))}
           </div>
@@ -90,7 +94,7 @@ export default function Home() {
         <div className="marqueeTrack">
           {[0, 1].map((copy) => (
             <div className="marqueeGroup" aria-hidden={copy === 1} key={copy}>
-              <span>PRAYER CHANGES EVERYTHING</span><i>✦</i><span>REVIVAL STARTS HERE</span><i>✦</i>
+              <span>PRAYER CHANGES EVERYTHING</span><Spark /><span>REVIVAL STARTS HERE</span><Spark />
             </div>
           ))}
         </div>
@@ -198,7 +202,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <a className="footerBrand" href="#top">WYPP®</a>
+        <a className="footerBrand" href="#top">WYPP</a>
         <p>When Young People Pray<br />Prayer. Revival. Global.</p>
         <div className="footerLinks"><a href="#movement">Movement</a><a href="#gatherings">Gatherings</a><a href={giveUrl}>Give</a><a href="https://www.instagram.com/wyppglobal/">Instagram</a></div>
         <p className="copyright">© {new Date().getFullYear()} WYPP Global</p>

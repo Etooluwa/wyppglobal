@@ -30,10 +30,10 @@ const topology = worldData as unknown as Topology<{ land: GeometryCollection }>;
 const land = feature(topology, topology.objects.land);
 
 function regionAt(progress: number) {
-  if (progress < 0.17) return 'North America';
-  if (progress < 0.39) return 'Europe + Africa';
-  if (progress < 0.66) return 'Asia';
-  if (progress < 0.86) return 'Across the Pacific';
+  if (progress < 0.4) return 'North America';
+  if (progress < 0.58) return 'Europe + Africa';
+  if (progress < 0.78) return 'Asia';
+  if (progress < 0.93) return 'Across the Pacific';
   return 'North America';
 }
 
@@ -52,7 +52,7 @@ export default function Globe() {
     const context = canvas.getContext('2d');
     if (!context) return;
 
-    const rotation = { longitude: 100, latitude: -28 };
+    const rotation = { longitude: 160, latitude: -28 };
     const projection = geoOrthographic().clipAngle(90).precision(0.2);
     const graticule = geoGraticule10();
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -162,9 +162,7 @@ export default function Globe() {
 
     const gsapContext = gsap.context(() => {
       if (!reduceMotion) {
-        gsap.to(rotation, {
-          longitude: -260,
-          ease: 'none',
+        gsap.timeline({
           scrollTrigger: {
             trigger: root,
             start: 'top 88%',
@@ -179,7 +177,10 @@ export default function Globe() {
               draw(performance.now());
             },
           },
-        });
+        })
+          .to(rotation, { longitude: 100, duration: 0.2, ease: 'power2.out' })
+          .to(rotation, { longitude: 100, duration: 0.2, ease: 'none' })
+          .to(rotation, { longitude: -260, duration: 0.6, ease: 'none' });
       }
     }, root);
 
@@ -204,7 +205,7 @@ export default function Globe() {
         <canvas ref={canvasRef} aria-label="A scroll-controlled globe showing WYPP cities around the world" />
         <div className="globeLegend">
           <span><i /> WYPP city</span>
-          <span>Scroll to move the world ↓</span>
+          <span>Scroll to move the world <i className="downIcon" aria-hidden="true" /></span>
         </div>
       </div>
     </div>
