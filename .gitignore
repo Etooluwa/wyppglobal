@@ -36,3 +36,6 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# Local source media (the optimized web version is committed instead)
+/public/images/vid2.mov

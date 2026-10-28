@@ -55,7 +55,7 @@ export default function Motion() {
         },
       });
 
-      gsap.to('.heroImage', {
+      gsap.to('.heroVideo', {
         yPercent: 14,
         scale: 1.14,
         ease: 'none',

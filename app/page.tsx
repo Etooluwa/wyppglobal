@@ -26,7 +26,18 @@ export default function Home() {
           <a className="navCta" href={ticketUrl}>Join a gathering <Arrow /></a>
         </nav>
 
-        <div className="heroImage" role="img" aria-label="Young people gathered in prayer" />
+        <video
+          className="heroVideo"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/images/prayer-wide.jpg"
+          aria-hidden="true"
+        >
+          <source src="/images/hero-video.mp4" type="video/mp4" />
+        </video>
         <div className="heroWash" />
         <div className="heroOrbit" aria-hidden="true">PRAYER · REVIVAL · GLOBAL ·</div>
         <div className="heroContent">
