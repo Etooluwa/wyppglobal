@@ -37,5 +37,6 @@ next-env.d.ts
 /outputs/
 /work/
 
-# Local source media (the optimized web version is committed instead)
+# Local source media (optimized web versions are committed instead)
 /public/images/vid2.mov
+/source-media/
