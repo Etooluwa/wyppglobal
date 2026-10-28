@@ -4,7 +4,7 @@ import Globe from './globe';
 const ticketUrl = 'https://www.eventbrite.com/o/when-young-people-pray-global-83494648743';
 const schoolUrl = 'https://www.eventbrite.com/cc/when-young-people-pray-north-american-tour-3377139';
 const giveUrl = 'https://pushpay.com/g/wyppnj';
-const cities = ['Toronto', 'London', 'Amsterdam', 'Dallas', 'Kumasi', 'Brooklyn', 'Atlanta', 'Dublin'];
+const cities = ['Toronto', 'Ottawa', 'London', 'Accra', 'Kumasi', 'Amsterdam', 'Dublin', 'Dallas', 'New Jersey', 'Boston', 'Chicago', 'Orlando', 'Brooklyn', 'Atlanta'];
 
 function Arrow() {
   return <span aria-hidden="true">↗</span>;

@@ -11,12 +11,18 @@ import worldData from 'world-atlas/countries-110m.json';
 const cities = [
   { name: 'Toronto', coordinates: [-79.38, 43.65] as [number, number] },
   { name: 'Montreal', coordinates: [-73.57, 45.5] as [number, number] },
+  { name: 'Ottawa', coordinates: [-75.7, 45.42] as [number, number] },
+  { name: 'Boston', coordinates: [-71.06, 42.36] as [number, number] },
+  { name: 'Chicago', coordinates: [-87.63, 41.88] as [number, number] },
+  { name: 'New Jersey', coordinates: [-74.4, 40.06] as [number, number] },
   { name: 'Dallas', coordinates: [-96.8, 32.78] as [number, number] },
   { name: 'Brooklyn', coordinates: [-73.95, 40.65] as [number, number] },
   { name: 'Atlanta', coordinates: [-84.39, 33.75] as [number, number] },
+  { name: 'Orlando', coordinates: [-81.38, 28.54] as [number, number] },
   { name: 'London', coordinates: [-0.13, 51.51] as [number, number] },
   { name: 'Amsterdam', coordinates: [4.9, 52.37] as [number, number] },
   { name: 'Dublin', coordinates: [-6.26, 53.35] as [number, number] },
+  { name: 'Accra', coordinates: [-0.19, 5.6] as [number, number] },
   { name: 'Kumasi', coordinates: [-1.62, 6.69] as [number, number] },
 ];
 
