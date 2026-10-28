@@ -126,7 +126,7 @@ export default function Home() {
         <div className="hostGrid">
           <article className="hostCard">
             <div className="hostImage"><img src="/images/host-kofi.jpg" alt="Pastor Kofi Dartey speaking" /><span>01 / 02</span></div>
-            <p className="role">Founder &amp; Host</p>
+            <p className="role">Host</p>
             <h3>Pastor Kofi Dartey</h3>
             <p>Founder and Head Pastor of Campus Rush, a global movement transforming lives and raising leaders on campuses and in cities.</p>
             <a href="https://www.instagram.com/kofi_dartey/">@kofi_dartey <Arrow /></a>
