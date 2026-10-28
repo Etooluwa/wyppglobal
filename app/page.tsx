@@ -1,4 +1,5 @@
 import Motion from './motion';
+import Globe from './globe';
 
 const ticketUrl = 'https://www.eventbrite.com/o/when-young-people-pray-global-83494648743';
 const schoolUrl = 'https://www.eventbrite.com/cc/when-young-people-pray-north-american-tour-3377139';
@@ -55,8 +56,14 @@ export default function Home() {
 
       <section className="manifesto" id="movement">
         <div className="sectionTag" data-reveal><span>01</span> The movement</div>
-        <p className="kicker" data-reveal>Born online. Alive in cities.</p>
-        <h2 data-heading>ONE SPARK.<br /><em>MANY CITIES.</em></h2>
+        <div className="movementStage">
+          <div className="movementSticky">
+            <p className="kicker" data-reveal>Born online. Alive in cities.</p>
+            <h2 data-heading>ONE SPARK.<br /><em>MANY CITIES.</em></h2>
+            <p className="movementPrompt">From one virtual room to a global movement. Scroll to follow the story around the world.</p>
+          </div>
+          <Globe />
+        </div>
         <div className="manifestoGrid">
           <p className="lead" data-reveal>When young people pray, rooms shift, hearts wake up, and cities are never the same.</p>
           <div className="bodyCopy" data-reveal>
