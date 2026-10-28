@@ -161,8 +161,8 @@ export default function Globe() {
           ease: 'none',
           scrollTrigger: {
             trigger: root,
-            start: 'top 12%',
-            end: 'bottom 88%',
+            start: 'top 88%',
+            end: 'bottom 12%',
             scrub: 0.35,
             onUpdate: (self) => {
               const nextRegion = regionAt(self.progress);

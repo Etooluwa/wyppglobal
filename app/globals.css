@@ -51,11 +51,11 @@ h1 em { display:inline-block; margin-left:11vw; }
 .manifesto h2,.gatherings h2,.story h2,.school h2,.merch h2,.give h2,.connect h2 { margin:0; font-size:clamp(58px,10vw,158px); line-height:.78; letter-spacing:-.075em; font-weight:1000; text-transform:uppercase; }
 .manifesto h2 em,.story h2 em,.merch h2 em { color:var(--orange); }
 .movementStage { display:grid; grid-template-columns:minmax(0,.92fr) minmax(440px,1.08fr); gap:4vw; align-items:start; }
-.movementSticky { position:sticky; top:9vh; padding-top:3vh; z-index:2; }
+.movementSticky { position:relative; padding-top:3vh; z-index:2; }
 .movementSticky h2 { font-size:clamp(58px,7.6vw,126px); }
 .movementPrompt { max-width:410px; margin:32px 0 0; font-size:15px; line-height:1.5; }
-.globeJourney { height:112vh; position:relative; }
-.globeSticky { position:sticky; top:7vh; height:78vh; min-height:520px; display:grid; grid-template-rows:auto minmax(0,1fr) auto; }
+.globeJourney { height:78vh; min-height:520px; position:relative; }
+.globeSticky { position:relative; height:100%; display:grid; grid-template-rows:auto minmax(0,1fr) auto; }
 .globeSticky canvas { width:100%; height:100%; min-height:0; display:block; }
 .globeTopline,.globeLegend { display:flex; align-items:center; justify-content:space-between; gap:20px; text-transform:uppercase; letter-spacing:.14em; font-size:9px; font-weight:900; }
 .globeTopline { padding-bottom:12px; border-bottom:1px solid #171717; }
@@ -170,10 +170,10 @@ footer p { color:#a8a8a8; line-height:1.5; margin:0; }
   .heroOrbit { display:none; }
   .manifestoGrid,.gatheringIntro,.schoolGrid { grid-template-columns:1fr; gap:45px; }
   .movementStage { grid-template-columns:1fr; gap:40px; }
-  .movementSticky { position:relative; top:auto; padding-top:0; }
+  .movementSticky { padding-top:0; }
   .movementSticky h2 { font-size:clamp(58px,13vw,112px); }
-  .globeJourney { height:110vh; }
-  .globeSticky { top:10vh; height:68vh; min-height:480px; }
+  .globeJourney { height:68vh; min-height:480px; }
+  .globeSticky { height:100%; }
   .manifestoGrid { margin-top:46px; }
   .photoGrid { grid-template-columns:1fr; }
   .photoCard.tall { grid-row:auto; min-height:600px; }
@@ -190,8 +190,7 @@ footer p { color:#a8a8a8; line-height:1.5; margin:0; }
   .sectionTag { margin-bottom:65px; }
   .manifesto,.story { padding-left:24px; padding-right:24px; }
   .movementPrompt { margin-top:26px; }
-  .globeJourney { height:105vh; }
-  .globeSticky { height:64vh; min-height:430px; }
+  .globeJourney { height:64vh; min-height:430px; }
   .globeTopline,.globeLegend { font-size:8px; letter-spacing:.1em; }
   .manifesto h2,.gatherings h2,.story h2,.school h2,.merch h2,.give h2,.connect h2 { font-size:clamp(52px,16vw,88px); }
   .photoCard,.photoCard.wide { min-height:430px; }
