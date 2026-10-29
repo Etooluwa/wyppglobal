@@ -1,5 +1,6 @@
 import Motion from './motion';
 import Globe from './globe';
+import HeroVideo from './hero-video';
 
 const ticketUrl = 'https://www.eventbrite.com/o/when-young-people-pray-global-83494648743';
 const schoolUrl = 'https://www.eventbrite.com/cc/when-young-people-pray-north-american-tour-3377139';
@@ -30,18 +31,7 @@ export default function Home() {
           <a className="navCta" href={ticketUrl}>Join a gathering <Arrow /></a>
         </nav>
 
-        <video
-          className="heroVideo"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster="/images/prayer-wide.jpg"
-          aria-hidden="true"
-        >
-          <source src="/images/hero-video.mp4" type="video/mp4" />
-        </video>
+        <HeroVideo />
         <div className="heroWash" />
         <div className="heroOrbit" aria-hidden="true">PRAYER · REVIVAL · GLOBAL ·</div>
         <div className="heroContent">
