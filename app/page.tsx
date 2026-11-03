@@ -25,19 +25,23 @@ export default function Home() {
 
         <HeroVideo />
         <div className="heroWash" />
-        <div className="heroOrbit" aria-hidden="true">PRAYER · REVIVAL · GLOBAL ·</div>
         <div className="heroContent">
-          <div>
-            <p className="eyebrow"><span>●</span> A global prayer movement</p>
+          <div className="heroCenter">
+            <div className="heroEmblem" aria-hidden="true"><Arrow /></div>
+            <p className="eyebrow">A global prayer movement</p>
             <h1 className="heroTitle">
-              <span className="heroLine"><span data-hero-line>WHEN</span></span>
-              <span className="heroLine"><span data-hero-line>YOUNG PEOPLE</span></span>
-              <span className="heroLine"><em data-hero-line>PRAY.</em></span>
+              <span className="heroLine"><span data-hero-line>WHEN YOUNG</span></span>
+              <span className="heroLine"><em data-hero-line>PEOPLE PRAY.</em></span>
             </h1>
           </div>
           <div className="heroBottom">
-            <p>Igniting a generation to seek God, carry revival, and transform cities around the world.</p>
-            <a className="circleLink" href="#movement" aria-label="Explore the movement"><span className="downIcon" aria-hidden="true" /></a>
+            <p>When young people pray, rooms shift, hearts wake up, and cities are never the same.</p>
+            <a className="heroGatheringLink" href={ticketUrl}>Find a Gathering <Arrow /></a>
+          </div>
+          <div className="heroRail">
+            <a href="#movement"><span className="downIcon" aria-hidden="true" /> Scroll</a>
+            <p>Join a generation seeking God through prayer, worship, and the Word.</p>
+            <span>Prayer · Revival · Global</span>
           </div>
         </div>
         <div className="cityStrip" aria-label="Cities reached by WYPP">
