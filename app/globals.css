@@ -45,10 +45,6 @@ h1 em { display:inline-block; }
 .heroCenter { align-self:center; justify-self:center; display:flex; flex-direction:column; align-items:center; text-align:center; }
 .heroCenter .eyebrow { order:1; margin:0 0 14px; }
 .heroTitle { order:2; max-width:none; font-size:clamp(68px,8.8vw,142px); line-height:.78; }
-.glitchWord { position:relative; display:inline-block; isolation:isolate; transform:skewX(-2deg); text-shadow:2px 0 var(--orange); }
-.glitchWord:before,.glitchWord:after { content:attr(data-text); position:absolute; inset:0; z-index:1; pointer-events:none; }
-.glitchWord:before { color:#fff; opacity:.9; transform:translate(-4px,-2px); clip-path:inset(0 0 63% 0); text-shadow:-3px 0 var(--orange); }
-.glitchWord:after { color:var(--orange); opacity:.72; transform:translate(4px,2px); clip-path:inset(58% 0 7% 0); mix-blend-mode:screen; }
 .heroBottom { display:flex; justify-content:space-between; align-items:end; gap:40px; }
 .heroBottom p { max-width:520px; margin:0; font-size:clamp(15px,1.15vw,18px); line-height:1.4; text-transform:uppercase; font-weight:700; }
 .heroGatheringLink { display:inline-flex; align-items:center; justify-content:space-between; width:min(280px,30vw); min-height:72px; padding:0 22px; border:2px solid #fff; text-transform:uppercase; letter-spacing:.12em; font-size:11px; font-weight:900; transition:background .2s,color .2s; }
