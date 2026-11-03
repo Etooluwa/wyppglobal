@@ -15,13 +15,15 @@ export default function Motion() {
       document.documentElement.classList.add('motion-ready');
 
       gsap.set('[data-hero-line]', { yPercent: 112 });
-      gsap.set('.hero .eyebrow, .heroBottom, .nav', { opacity: 0, y: 22 });
+      gsap.set('.hero .eyebrow, .heroEmblem, .heroBottom, .heroRail, .nav', { opacity: 0, y: 22 });
 
       gsap.timeline({ defaults: { ease: 'power4.out' } })
         .to('.nav', { opacity: 1, y: 0, duration: 0.8 })
+        .to('.heroEmblem', { opacity: 1, y: 0, duration: 0.65 }, '-=0.5')
         .to('.hero .eyebrow', { opacity: 1, y: 0, duration: 0.65 }, '-=0.45')
         .to('[data-hero-line]', { yPercent: 0, duration: 1.05, stagger: 0.12 }, '-=0.4')
-        .to('.heroBottom', { opacity: 1, y: 0, duration: 0.8 }, '-=0.55');
+        .to('.heroBottom', { opacity: 1, y: 0, duration: 0.8 }, '-=0.55')
+        .to('.heroRail', { opacity: 1, y: 0, duration: 0.7 }, '-=0.55');
 
       gsap.to('.scrollProgress', {
         scaleX: 1,
@@ -60,12 +62,6 @@ export default function Motion() {
         scale: 1.14,
         ease: 'none',
         scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true },
-      });
-
-      gsap.to('.heroOrbit', {
-        rotate: 340,
-        ease: 'none',
-        scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 0.5 },
       });
 
       gsap.utils.toArray<HTMLElement>('[data-reveal]').forEach((element) => {
