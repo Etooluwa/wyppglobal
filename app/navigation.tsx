@@ -32,6 +32,13 @@ export default function Navigation({ ticketUrl }: NavigationProps) {
     };
   }, []);
 
+  useEffect(() => {
+    document.documentElement.style.overflow = open ? 'hidden' : '';
+    return () => {
+      document.documentElement.style.overflow = '';
+    };
+  }, [open]);
+
   const closeMenu = () => setOpen(false);
 
   return (
@@ -55,17 +62,22 @@ export default function Navigation({ ticketUrl }: NavigationProps) {
         <span aria-hidden="true" />
       </button>
 
-      <div className={`mobileMenuPanel${open ? ' open' : ''}`} id="mobile-navigation">
-        {links.map((link, index) => (
-          <a href={link.href} key={link.label} onClick={closeMenu}>
-            <span><small>0{index + 1}</small>{link.label}</span>
-            <span className="arrowIcon" aria-hidden="true" />
-          </a>
-        ))}
+      <div className={`mobileMenuPanel${open ? ' open' : ''}`} id="mobile-navigation" aria-hidden={!open}>
+        <div className="mobileMenuWatermark" aria-hidden="true">WYPP</div>
+        <div className="mobileMenuLinks">
+          {links.slice(0, 3).map((link) => (
+            <a href={link.href} key={link.label} onClick={closeMenu}>{link.label}</a>
+          ))}
+        </div>
         <a className="mobileGatheringLink" href={ticketUrl} onClick={closeMenu}>
-          <span><small>05</small>Attend a Gathering</span>
+          <span>Attend a Gathering</span>
           <span className="arrowIcon" aria-hidden="true" />
         </a>
+        <a className="mobileSocialLink" href="https://www.instagram.com/wyppglobal/" onClick={closeMenu}>
+          <span>Follow Us</span>
+          <strong>Instagram</strong>
+        </a>
+        <p className="mobileMenuFooter">Prayer <i /> Revival <i /> Global</p>
       </div>
     </nav>
   );
