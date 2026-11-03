@@ -41,17 +41,14 @@ h1 { margin:0; max-width:1100px; font-size:clamp(72px,10.6vw,174px); line-height
 h1 em,h2 em { color:var(--acid); font-style:normal; }
 h1 em { display:inline-block; }
 .heroLine { display:block; overflow:hidden; padding-bottom:.08em; margin-bottom:-.08em; }
-.heroLine>[data-hero-line] { display:inline-block; will-change:transform; }
+.heroLine>[data-hero-line] { display:inline-block; white-space:nowrap; will-change:transform; }
 .heroCenter { align-self:center; justify-self:center; display:flex; flex-direction:column; align-items:center; text-align:center; }
 .heroCenter .eyebrow { order:1; margin:0 0 14px; }
 .heroTitle { order:2; max-width:none; font-size:clamp(68px,8.8vw,142px); line-height:.78; }
-.glitchWord { position:relative; display:inline-block; isolation:isolate; animation:glitchBase 3.4s steps(1,end) infinite; }
-.glitchWord:before,.glitchWord:after { content:attr(data-text); position:absolute; inset:0; pointer-events:none; opacity:0; }
-.glitchWord:before { z-index:-1; color:#fff; text-shadow:-4px 0 var(--orange); clip-path:inset(0 0 58% 0); animation:glitchTop 3.4s steps(1,end) infinite; }
-.glitchWord:after { z-index:1; color:var(--orange); mix-blend-mode:screen; clip-path:inset(58% 0 8% 0); animation:glitchBottom 3.4s steps(1,end) infinite; }
-@keyframes glitchBase { 0%,86%,92%,100% { transform:translate(0); text-shadow:none; } 87% { transform:translate(-2px,1px); text-shadow:3px 0 var(--orange); } 89% { transform:translate(2px,-1px); text-shadow:-2px 0 #fff; } 91% { transform:translate(-1px,0); } }
-@keyframes glitchTop { 0%,86%,92%,100% { opacity:0; transform:translate(0); } 87% { opacity:.95; transform:translate(6px,-2px); } 89% { opacity:.8; transform:translate(-5px,1px); } 91% { opacity:.7; transform:translate(3px,0); } }
-@keyframes glitchBottom { 0%,86%,92%,100% { opacity:0; transform:translate(0); } 88% { opacity:.78; transform:translate(-7px,2px); } 90% { opacity:.65; transform:translate(5px,-1px); } 91% { opacity:.5; transform:translate(-2px,0); } }
+.glitchWord { position:relative; display:inline-block; isolation:isolate; transform:skewX(-2deg); text-shadow:2px 0 var(--orange); }
+.glitchWord:before,.glitchWord:after { content:attr(data-text); position:absolute; inset:0; z-index:1; pointer-events:none; }
+.glitchWord:before { color:#fff; opacity:.9; transform:translate(-4px,-2px); clip-path:inset(0 0 63% 0); text-shadow:-3px 0 var(--orange); }
+.glitchWord:after { color:var(--orange); opacity:.72; transform:translate(4px,2px); clip-path:inset(58% 0 7% 0); mix-blend-mode:screen; }
 .heroBottom { display:flex; justify-content:space-between; align-items:end; gap:40px; }
 .heroBottom p { max-width:520px; margin:0; font-size:clamp(15px,1.15vw,18px); line-height:1.4; text-transform:uppercase; font-weight:700; }
 .heroGatheringLink { display:inline-flex; align-items:center; justify-content:space-between; width:min(280px,30vw); min-height:72px; padding:0 22px; border:2px solid #fff; text-transform:uppercase; letter-spacing:.12em; font-size:11px; font-weight:900; transition:background .2s,color .2s; }
@@ -211,7 +208,7 @@ footer p { color:#a8a8a8; line-height:1.5; margin:0; }
   .mobileMenuFooter i { width:4px; height:4px; border-radius:50%; background:var(--orange); }
   .heroContent { width:calc(100% - 40px); min-height:calc(100svh - 130px); padding:24px 0 14px; gap:20px; }
   .heroCenter .eyebrow { margin:0 0 12px; font-size:8px; }
-  .heroTitle { font-size:clamp(56px,16vw,86px); line-height:.8; }
+  .heroTitle { font-size:clamp(40px,12.6vw,68px); line-height:.8; }
   .heroBottom { align-items:center; flex-direction:column; gap:24px; text-align:center; }
   .heroBottom p { max-width:340px; font-size:12px; line-height:1.45; }
   .heroGatheringLink { width:min(330px,88vw); min-height:68px; }
@@ -262,7 +259,6 @@ footer p { color:#a8a8a8; line-height:1.5; margin:0; }
 @media (prefers-reduced-motion:reduce) {
   html { scroll-behavior:auto; }
   * { transition:none!important; animation:none!important; }
-  .glitchWord:before,.glitchWord:after { animation:none!important; opacity:0!important; }
   .scrollProgress { display:none; }
   .marqueeTrack { transform:none!important; }
 }

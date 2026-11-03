@@ -39,7 +39,7 @@ export default function Home() {
           </div>
           <div className="heroRail">
             <a href="#movement"><span className="downIcon" aria-hidden="true" /> Scroll</a>
-            <p>Join a generation seeking God through prayer, worship, and the Word.</p>
+            <p>Join a generation seeking God through prayer</p>
             <span>Prayer · Revival · Global</span>
           </div>
         </div>
@@ -69,7 +69,6 @@ export default function Home() {
           <div className="bodyCopy" data-reveal>
             <p>WYPP started virtually and grew into revival gatherings across North America, Africa, and Europe. Different cities, one sound: a generation hungry for the presence of God.</p>
             <p>Every stop exists to ignite a fire that keeps burning long after the gathering ends.</p>
-            <a className="textLink" href="#story">Discover our story <Arrow /></a>
           </div>
         </div>
         <div className="scribble" aria-hidden="true">PRAY / PRAY / PRAY / PRAY</div>
