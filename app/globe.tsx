@@ -117,7 +117,7 @@ export default function Globe() {
 
         context.beginPath();
         context.arc(x, y, 4.2, 0, Math.PI * 2);
-        context.fillStyle = '#ddff00';
+        context.fillStyle = '#ff4e00';
         context.fill();
         context.strokeStyle = '#090909';
         context.lineWidth = 1.5;

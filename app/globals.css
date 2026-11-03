@@ -1,13 +1,13 @@
 @import 'tailwindcss';
 
-:root { --acid:#ddff00; --ink:#090909; --paper:#f0ede3; --orange:#ff4e00; --violet:#5638ee; }
+:root { --acid:#fff; --ink:#090909; --paper:#f0ede3; --orange:#ff4e00; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; overflow-x:clip; }
 body { margin:0; background:var(--ink); color:#fff; font-family:Arial,Helvetica,sans-serif; overflow-x:clip; }
 a { color:inherit; text-decoration:none; }
 img { display:block; width:100%; }
 ::selection { background:var(--acid); color:var(--ink); }
-.scrollProgress { position:fixed; z-index:100; top:0; left:0; width:100%; height:4px; background:var(--acid); transform:scaleX(0); transform-origin:left center; pointer-events:none; }
+.scrollProgress { position:fixed; z-index:100; top:0; left:0; width:100%; height:4px; background:var(--orange); transform:scaleX(0); transform-origin:left center; pointer-events:none; }
 
 .hero { min-height:100svh; position:relative; overflow:hidden; background:#161616; }
 .heroVideo { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 35%; background:url('/images/prayer-wide.jpg') center 35%/cover no-repeat; filter:grayscale(100%) contrast(1.1); transform:scale(1.02); }
@@ -72,7 +72,7 @@ h1 em { display:inline-block; margin-left:11vw; }
 .globeTopline strong { color:var(--orange); font-size:11px; }
 .globeLegend { padding-top:12px; border-top:1px solid #171717; }
 .globeLegend span { display:flex; align-items:center; gap:8px; }
-.globeLegend i { width:8px; height:8px; border-radius:50%; background:var(--acid); border:1px solid var(--ink); box-shadow:0 0 0 4px #ddff0066; }
+.globeLegend i { width:8px; height:8px; border-radius:50%; background:var(--orange); border:1px solid var(--ink); box-shadow:0 0 0 4px #ff4e004d; }
 .manifestoGrid { display:grid; grid-template-columns:1.2fr 1fr; gap:12vw; align-items:start; margin:clamp(38px,5vw,72px) 0 20px; }
 .lead { font-size:clamp(28px,3.4vw,54px); line-height:1.03; letter-spacing:-.04em; font-weight:800; margin:0; }
 .bodyCopy { max-width:520px; font-size:17px; line-height:1.55; }
@@ -134,7 +134,7 @@ h1 em { display:inline-block; margin-left:11vw; }
 .schoolGrid { display:grid; grid-template-columns:1.5fr .6fr; gap:8vw; align-items:end; }
 .schoolGrid>div p { font-size:20px; line-height:1.45; margin:0 0 35px; }
 .school h2 em { color:var(--acid); }
-.schoolMark { position:absolute; right:-4vw; top:-14vw; font-size:42vw; line-height:1; font-weight:200; color:#ddff0010; }
+.schoolMark { position:absolute; right:-4vw; top:-14vw; font-size:42vw; line-height:1; font-weight:200; color:#ffffff10; }
 
 .merch { display:grid; grid-template-columns:1.1fr .9fr; padding:0; }
 .merchPhoto { position:relative; min-height:820px; background:#d7d5cd; }
@@ -186,8 +186,8 @@ footer p { color:#a8a8a8; line-height:1.5; margin:0; }
   .mobileMenuButton.open>span:before { transform:rotate(45deg); }
   .mobileMenuButton.open>span:after { transform:rotate(-45deg); }
   .mobileMenuPanel { position:fixed; z-index:2; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:100svh; padding:94px 26px 24px; overflow-y:auto; background:var(--acid); color:var(--ink); opacity:0; visibility:hidden; transform:translateY(-100%); pointer-events:none; transition:opacity .35s,transform .42s cubic-bezier(.76,0,.24,1),visibility .35s; isolation:isolate; }
-  .mobileMenuPanel:before { content:""; position:absolute; z-index:-2; inset:0; background:linear-gradient(#ddff00e8,#ddff00e8),url('/images/prayer-wide.jpg') center/cover no-repeat; filter:grayscale(100%); }
-  .mobileMenuPanel:after { content:""; position:absolute; z-index:-1; inset:0; background:linear-gradient(180deg,transparent 55%,#ddff00 96%); }
+  .mobileMenuPanel:before { content:""; position:absolute; z-index:-2; inset:0; background:linear-gradient(#ffffffe8,#ffffffe8),url('/images/prayer-wide.jpg') center/cover no-repeat; filter:grayscale(100%); }
+  .mobileMenuPanel:after { content:""; position:absolute; z-index:-1; inset:0; background:linear-gradient(180deg,transparent 55%,#fff 96%); }
   .mobileMenuPanel.open { opacity:1; visibility:visible; transform:translateY(0); pointer-events:auto; }
   .mobileMenuWatermark { position:absolute; z-index:-1; top:19%; left:50%; transform:translateX(-50%); color:#09090910; font-size:clamp(105px,32vw,180px); line-height:.8; letter-spacing:-.1em; font-weight:1000; }
   .mobileMenuLinks { display:flex; flex-direction:column; align-items:center; gap:11px; }
