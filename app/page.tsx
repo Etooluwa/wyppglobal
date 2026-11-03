@@ -27,11 +27,10 @@ export default function Home() {
         <div className="heroWash" />
         <div className="heroContent">
           <div className="heroCenter">
-            <div className="heroEmblem" aria-hidden="true"><Arrow /></div>
             <p className="eyebrow">A global prayer movement</p>
             <h1 className="heroTitle">
               <span className="heroLine"><span data-hero-line>WHEN YOUNG</span></span>
-              <span className="heroLine"><em data-hero-line>PEOPLE PRAY.</em></span>
+              <span className="heroLine"><em data-hero-line>PEOPLE <span className="glitchWord" data-text="PRAY.">PRAY.</span></em></span>
             </h1>
           </div>
           <div className="heroBottom">
