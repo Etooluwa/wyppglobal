@@ -190,13 +190,10 @@ footer p { color:#a8a8a8; line-height:1.5; margin:0; }
   .mobileMenuPanel:after { content:""; position:absolute; z-index:-1; inset:0; background:linear-gradient(180deg,transparent 55%,#fff 96%); }
   .mobileMenuPanel.open { opacity:1; visibility:visible; transform:translateY(0); pointer-events:auto; }
   .mobileMenuWatermark { position:absolute; z-index:-1; top:19%; left:50%; transform:translateX(-50%); color:#09090910; font-size:clamp(105px,32vw,180px); line-height:.8; letter-spacing:-.1em; font-weight:1000; }
-  .mobileMenuLinks { display:flex; flex-direction:column; align-items:center; gap:11px; }
-  .mobileMenuLinks a { font-size:clamp(36px,11vw,54px); line-height:.95; letter-spacing:-.065em; font-weight:1000; text-transform:uppercase; transition:transform .2s,color .2s; }
+  .mobileMenuLinks { display:flex; flex-direction:column; align-items:center; gap:12px; width:100%; }
+  .mobileMenuLinks a { max-width:min(360px,92vw); text-align:center; font-size:clamp(32px,9.5vw,50px); line-height:.9; letter-spacing:-.065em; font-weight:1000; text-transform:uppercase; transition:transform .2s,color .2s; }
   .mobileMenuLinks a:active { color:var(--orange); transform:scale(.96); }
-  .mobileMenuPanel .mobileGatheringLink { display:flex; align-items:center; justify-content:space-between; width:min(330px,88vw); min-height:62px; margin-top:27px; padding:0 19px; border:2px solid var(--ink); font-size:12px; font-weight:1000; letter-spacing:.08em; text-transform:uppercase; }
-  .mobileSocialLink { display:flex; align-items:center; gap:9px; margin-top:28px; font-size:10px; letter-spacing:.13em; text-transform:uppercase; }
-  .mobileSocialLink strong { padding-bottom:3px; border-bottom:1px solid; font-size:12px; }
-  .mobileMenuFooter { display:flex; align-items:center; gap:9px; margin:22px 0 0; font-size:8px; font-weight:900; letter-spacing:.16em; text-transform:uppercase; }
+  .mobileMenuFooter { display:flex; align-items:center; gap:9px; margin:30px 0 0; font-size:8px; font-weight:900; letter-spacing:.16em; text-transform:uppercase; }
   .mobileMenuFooter i { width:4px; height:4px; border-radius:50%; background:var(--orange); }
   .heroContent { min-height:calc(100svh - 130px); padding-top:13vh; }
   h1 { font-size:clamp(57px,18vw,104px); line-height:.76; }

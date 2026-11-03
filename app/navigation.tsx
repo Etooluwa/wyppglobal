@@ -15,6 +15,11 @@ const links = [
 
 export default function Navigation({ ticketUrl }: NavigationProps) {
   const [open, setOpen] = useState(false);
+  const mobileLinks = [
+    ...links.slice(0, 3),
+    { label: 'Attend a Gathering', href: ticketUrl },
+    links[3],
+  ];
 
   useEffect(() => {
     const closeOnEscape = (event: KeyboardEvent) => {
@@ -65,18 +70,10 @@ export default function Navigation({ ticketUrl }: NavigationProps) {
       <div className={`mobileMenuPanel${open ? ' open' : ''}`} id="mobile-navigation" aria-hidden={!open}>
         <div className="mobileMenuWatermark" aria-hidden="true">WYPP</div>
         <div className="mobileMenuLinks">
-          {links.slice(0, 3).map((link) => (
+          {mobileLinks.map((link) => (
             <a href={link.href} key={link.label} onClick={closeMenu}>{link.label}</a>
           ))}
         </div>
-        <a className="mobileGatheringLink" href={ticketUrl} onClick={closeMenu}>
-          <span>Attend a Gathering</span>
-          <span className="arrowIcon" aria-hidden="true" />
-        </a>
-        <a className="mobileSocialLink" href="https://www.instagram.com/wyppglobal/" onClick={closeMenu}>
-          <span>Follow Us</span>
-          <strong>Instagram</strong>
-        </a>
         <p className="mobileMenuFooter">Prayer <i /> Revival <i /> Global</p>
       </div>
     </nav>
