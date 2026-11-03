@@ -1,6 +1,7 @@
 import Motion from './motion';
 import Globe from './globe';
 import HeroVideo from './hero-video';
+import Navigation from './navigation';
 
 const ticketUrl = 'https://www.eventbrite.com/o/when-young-people-pray-global-83494648743';
 const schoolUrl = 'https://www.eventbrite.com/cc/when-young-people-pray-north-american-tour-3377139';
@@ -20,16 +21,7 @@ export default function Home() {
     <main>
       <Motion />
       <section className="hero" id="top">
-        <nav className="nav" aria-label="Primary navigation">
-          <a className="brand" href="#top" aria-label="WYPP home">WYPP<span>®</span></a>
-          <div className="navLinks">
-            <a href="#movement">Movement</a>
-            <a href="#gatherings">Gatherings</a>
-            <a href="#story">Our story</a>
-            <a href="#give">Give</a>
-          </div>
-          <a className="navCta" href={ticketUrl}>Join a gathering <Arrow /></a>
-        </nav>
+        <Navigation ticketUrl={ticketUrl} />
 
         <HeroVideo />
         <div className="heroWash" />
