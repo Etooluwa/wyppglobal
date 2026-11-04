@@ -93,6 +93,23 @@ export default function Motion() {
         });
       });
 
+      gsap.utils.toArray<HTMLElement>('[data-stat-number]').forEach((element) => {
+        const target = Number(element.dataset.statNumber);
+        if (!Number.isFinite(target)) return;
+
+        const counter = { value: 0 };
+        element.textContent = '0';
+        gsap.to(counter, {
+          value: target,
+          duration: 0.85,
+          ease: 'power2.out',
+          onUpdate: () => {
+            element.textContent = String(Math.round(counter.value));
+          },
+          scrollTrigger: { trigger: '.statCard', start: 'top 88%', once: true },
+        });
+      });
+
       gsap.from('.sequence > div', {
         xPercent: 35,
         opacity: 0,

@@ -124,6 +124,7 @@ a.dateAction:hover { color:var(--orange); }
 .statItem { min-height:inherit; padding:32px; display:flex; flex-direction:column; justify-content:space-between; }
 .statItem + .statItem { border-left:1px solid #09090933; }
 .statCard strong { font-size:clamp(58px,7vw,105px); line-height:.72; letter-spacing:-.09em; }
+.statCard strong i { font-style:normal; }
 .statCard strong span { font-size:.4em; color:var(--orange); }
 .statCard p { max-width:240px; margin:0; line-height:1.4; }
 
