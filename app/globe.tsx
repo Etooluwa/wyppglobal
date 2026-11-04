@@ -205,7 +205,6 @@ export default function Globe() {
         <canvas ref={canvasRef} aria-label="A scroll-controlled globe showing WYPP cities around the world" />
         <div className="globeLegend">
           <span><i /> WYPP city</span>
-          <span>Scroll to move the world <i className="downIcon" aria-hidden="true" /></span>
         </div>
       </div>
     </div>
