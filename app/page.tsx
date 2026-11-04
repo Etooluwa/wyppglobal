@@ -103,9 +103,38 @@ export default function Home() {
       </section>
 
       <section className="sequence" aria-label="The rhythm of WYPP">
-        <div><span>01</span><h3>GATHER</h3><p>One room. One sound. One generation seeking God.</p></div>
-        <div><span>02</span><h3>ENCOUNTER</h3><p>Prayer and worship create space for lives to be transformed.</p></div>
-        <div><span>03</span><h3>CARRY</h3><p>Take the fire home. Let revival move through your city.</p></div>
+        <div className="sequencePhoto" aria-hidden="true">
+          <img src="/images/prayer-wide.jpg" alt="" />
+        </div>
+        <div className="sequenceShade" aria-hidden="true" />
+        <div className="sequenceFrame">
+          <div className="sequenceSymbols" aria-hidden="true">
+            <i /><span>PRAYER</span><i /><span>WORSHIP</span><i /><span>THE WORD</span><i />
+          </div>
+          <p className="sequenceStatement">One room. One sound. A generation moving from hunger to transformation.</p>
+          <div className="sequenceSteps">
+            <article className="sequenceStep">
+              <span>01</span>
+              <h3>GATHER</h3>
+              <p>One room. One sound. One generation seeking God.</p>
+            </article>
+            <article className="sequenceStep">
+              <span>02</span>
+              <h3>ENCOUNTER</h3>
+              <p>Prayer and worship create space for lives to be transformed.</p>
+            </article>
+            <article className="sequenceStep">
+              <span>03</span>
+              <h3>CARRY</h3>
+              <p>Take the fire home. Let revival move through your city.</p>
+            </article>
+          </div>
+          <div className="sequenceMeta">
+            <span>WYPP Global</span>
+            <strong>When Young People Pray</strong>
+            <span>Prayer movement</span>
+          </div>
+        </div>
       </section>
 
       <section className="story" id="story">

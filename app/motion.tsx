@@ -93,13 +93,28 @@ export default function Motion() {
         });
       });
 
-      gsap.from('.sequence > div', {
-        xPercent: 35,
+      gsap.fromTo('.sequencePhoto img', { yPercent: -9, scale: 1.12 }, {
+        yPercent: 9,
+        scale: 1.03,
+        ease: 'none',
+        scrollTrigger: { trigger: '.sequence', start: 'top bottom', end: 'bottom top', scrub: true },
+      });
+
+      gsap.from('.sequenceStatement', {
+        y: 80,
         opacity: 0,
-        stagger: 0.16,
-        duration: 0.9,
+        duration: 1,
         ease: 'power3.out',
-        scrollTrigger: { trigger: '.sequence', start: 'top 78%', once: true },
+        scrollTrigger: { trigger: '.sequenceStatement', start: 'top 86%', once: true },
+      });
+
+      gsap.from('.sequenceStep', {
+        yPercent: 35,
+        opacity: 0,
+        stagger: 0.14,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: '.sequenceSteps', start: 'top 84%', once: true },
       });
 
       gsap.from('.hostCard', {
