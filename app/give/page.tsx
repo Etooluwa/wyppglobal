@@ -34,91 +34,66 @@ function Arrow() {
 export default function GivePage() {
   return (
     <main className="givingPage">
-      <section className="givingHero" id="top">
+      <section className="simpleGiving" id="top">
         <Navigation ticketUrl={ticketUrl} />
-        <div className="givingHeroInner">
-          <p className="givingEyebrow">Partner with WYPP · Global Partners</p>
-          <h1>TAKE THE<br /><em>FIRE FURTHER.</em></h1>
-          <div className="givingHeroBottom">
+        <div className="simpleGivingInner">
+          <header className="simpleGivingHero">
+            <p className="simpleGivingKicker">Partner with WYPP</p>
+            <h1>TAKE THE<br />FIRE <em>FURTHER.</em></h1>
             <p>Your generosity helps take WYPP to more cities and creates room for more young people to encounter God.</p>
-            <a className="givingOutlineButton" href={givingUrl}>Give to WYPP <Arrow /></a>
-          </div>
-        </div>
-      </section>
+          </header>
 
-      <section className="partnerLevels" aria-labelledby="partner-levels-title">
-        <div className="givingSectionIntro">
-          <p className="givingIndex">01 / Choose your level</p>
-          <div>
-            <h2 id="partner-levels-title">ONE FIRE.<br /><em>YOUR PART.</em></h2>
-            <p>Give the yearly amount at once, or spread it across the year. Amounts are rounded to the cent.</p>
-          </div>
-        </div>
+          <section className="compactGivingSection" aria-labelledby="partner-levels-title">
+            <div className="compactSectionHeading">
+              <h2 id="partner-levels-title">Choose your level</h2>
+              <p>Give the yearly amount at once, or spread it across the year. Amounts are rounded to the cent.</p>
+            </div>
+            <div className="partnerTable">
+              {levels.map((level) => (
+                <article className="partnerRow" key={level.name}>
+                  <div className="partnerLevel"><strong>{level.name} partner</strong><p>{level.annual}<small>A year</small></p></div>
+                  <div><strong>{level.weekly}</strong><span>Every week</span></div>
+                  <div><strong>{level.biweekly}</strong><span>Every 2 weeks</span></div>
+                  <div><strong>{level.monthly}</strong><span>Every month</span></div>
+                  <div><strong>{level.twiceMonthly}</strong><span>1st &amp; 15th monthly</span></div>
+                </article>
+              ))}
+              <div className="otherAmountRow"><strong>Other amount</strong><p>Every gift matters. Enter any amount on the giving page.</p></div>
+            </div>
+          </section>
 
-        <div className="levelGrid">
-          {levels.map((level, index) => (
-            <article className="levelCard" key={level.name}>
-              <div className="levelCardTop"><span>0{index + 1}</span><p>{level.name} partner</p></div>
-              <h3>{level.annual}<small>A year</small></h3>
-              <dl>
-                <div><dt>Every week</dt><dd>{level.weekly}</dd></div>
-                <div><dt>Every 2 weeks</dt><dd>{level.biweekly}</dd></div>
-                <div><dt>Every month</dt><dd>{level.monthly}</dd></div>
-                <div><dt>1st &amp; 15th monthly</dt><dd>{level.twiceMonthly}</dd></div>
-              </dl>
-            </article>
-          ))}
-          <article className="levelCard otherAmount">
-            <div className="levelCardTop"><span>+</span><p>Other amount</p></div>
-            <h3>EVERY GIFT<br /><em>MATTERS.</em></h3>
-            <p>Enter any amount on the secure giving page, as a recurring partnership or a one-time gift.</p>
-          </article>
-        </div>
-      </section>
+          <section className="compactGivingSection howToGive">
+            <div className="compactSectionHeading">
+              <h2>How to give</h2>
+              <p>Open our secure giving page and follow these steps.</p>
+            </div>
+            <ol className="compactSteps">
+              <li><span>01</span><p>Choose <strong>Set up recurring</strong> or <strong>Give one time</strong>.</p></li>
+              <li><span>02</span><p>Enter the amount for your level and pick how often you want to give.</p></li>
+              <li><span>03</span><p>Under <strong>Campus</strong>, choose <strong>WHEN YOUNG PEOPLE PRAY</strong>. The fund is already set to WYPP Global Partners.</p></li>
+              <li><span>04</span><p>Confirm your start date and payment method, then select <strong>Next</strong>.</p></li>
+            </ol>
+            <a className="givingPrimaryButton" href={givingUrl}>Give to WYPP <Arrow /></a>
+            <div className="givingNotes">
+              <p>Prefer a single gift? Choose <strong>Give one time</strong> on the same page.</p>
+              <p>Partnering with WYPP? Complete the <a href={partnershipUrl}>partnership form <Arrow /></a>.</p>
+            </div>
+          </section>
 
-      <section className="givingSteps">
-        <div className="givingSectionIntro light">
-          <p className="givingIndex">02 / How to give</p>
-          <div>
-            <h2>MAKE ROOM<br /><em>FOR MORE.</em></h2>
-            <p>Open our secure giving page and follow these steps to direct your gift to WYPP Global Partners.</p>
-          </div>
-        </div>
-        <ol className="givingStepsList">
-          <li><span>01</span><p>Choose <strong>Set up recurring</strong> or <strong>Give one time</strong>.</p></li>
-          <li><span>02</span><p>Enter your amount and select how often you want to give.</p></li>
-          <li><span>03</span><p>Under <strong>Campus</strong>, choose <strong>WHEN YOUNG PEOPLE PRAY</strong>. The fund is already set to WYPP Global Partners.</p></li>
-          <li><span>04</span><p>Confirm your start date and payment method, then select <strong>Next</strong>.</p></li>
-        </ol>
-        <div className="givingActionRow">
-          <a className="buttonLime" href={givingUrl}>Open secure giving <Arrow /></a>
-          <p>Already partnering? <a href={partnershipUrl}>Complete the partnership form <Arrow /></a></p>
-        </div>
-      </section>
+          <section className="compactAssurance" aria-label="Giving details">
+            <div><h3>Change or stop anytime</h3><p>Update your amount or payment method from your giving account.</p></div>
+            <div><h3>Secure giving</h3><p>Processed securely through Pushpay.</p></div>
+            <div><h3>Giving statements</h3><p>Track your giving in your Pushpay account.</p></div>
+          </section>
 
-      <section className="givingAssurance" aria-label="Giving details">
-        <div><span>01</span><h3>Change or stop anytime</h3><p>Update your amount or payment method from your giving account.</p></div>
-        <div><span>02</span><h3>Secure giving</h3><p>Your gift is processed securely through Pushpay.</p></div>
-        <div><span>03</span><h3>Giving statements</h3><p>Track your giving from your Pushpay account.</p></div>
-      </section>
-
-      <section className="givingFaq">
-        <div className="givingFaqTitle">
-          <p className="givingIndex">03 / Questions</p>
-          <h2>GOOD TO<br /><em>KNOW.</em></h2>
+          <section className="compactFaq">
+            <h2>Good to know</h2>
+            <details open><summary>How do the levels work?</summary><p>Each level is a yearly commitment. Choose a level, pick how often you want to give, and enter the matching amount. Because amounts are rounded to the cent, your yearly total may differ by a few cents.</p></details>
+            <details><summary>Can I change or stop my gift?</summary><p>Yes. Sign in to your giving account to change the amount, update your payment method, or stop your recurring gift.</p></details>
+            <details><summary>Can I give just once?</summary><p>Yes. Choose Give one time instead of Set up recurring.</p></details>
+            <details><summary>How often can I give?</summary><p>Every week, every two weeks, every month, or on the 1st and 15th. You can also give one time.</p></details>
+          </section>
         </div>
-        <div className="givingFaqList">
-          <details open><summary>How do the levels work?</summary><p>Each level is a yearly commitment. Choose a level, pick how often you want to give, and enter the matching amount on the giving page. Because amounts are rounded to the cent, your yearly total may differ by a few cents.</p></details>
-          <details><summary>Can I change or stop my gift?</summary><p>Yes. Sign in to your giving account to change the amount, update your payment method, or stop your recurring gift.</p></details>
-          <details><summary>Can I give just once?</summary><p>Yes. On the giving page, choose Give one time instead of Set up recurring.</p></details>
-          <details><summary>How often can I give?</summary><p>Every week, every two weeks, every month, or on the 1st and 15th. You can also give one time.</p></details>
-        </div>
-      </section>
-
-      <section className="givingFinalCta">
-        <p>Prayer · Revival · Global</p>
-        <h2>TAKE THE<br /><em>FIRE FURTHER.</em></h2>
-        <a className="givingOutlineButton" href={givingUrl}>Give to WYPP <Arrow /></a>
       </section>
 
       <Footer />
