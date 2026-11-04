@@ -36,7 +36,7 @@ export default function Home() {
           </div>
           <div className="heroBottom">
             <p>When young people pray, rooms shift, hearts wake up, and cities are never the same.</p>
-            <a className="heroGatheringLink" href={ticketUrl}>Find a Gathering <Arrow /></a>
+            <a className="heroGatheringLink" href={ticketUrl}>WYPP Nights <Arrow /></a>
           </div>
           <div className="heroRail">
             <a href="#movement"><span className="downIcon" aria-hidden="true" /> Scroll</a>
@@ -95,7 +95,7 @@ export default function Home() {
           </div>
           <div className="introSide" data-reveal>
             <p>We create room for a generation to encounter God together through prayer, worship, and the Word.</p>
-            <a className="buttonDark" href={ticketUrl}>Find a gathering <Arrow /></a>
+            <a className="buttonDark" href={ticketUrl}>WYPP Nights <Arrow /></a>
           </div>
         </div>
 
