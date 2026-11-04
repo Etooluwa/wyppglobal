@@ -85,7 +85,7 @@ export default function Home() {
         </div>
       </section>
 
-      <WyppDates ticketUrl={ticketUrl} />
+      <WyppDates />
 
       <section className="gatherings" id="gatherings">
         <div className="gatheringIntro">
