@@ -17,7 +17,7 @@ export default function Navigation({ ticketUrl }: NavigationProps) {
   const [open, setOpen] = useState(false);
   const mobileLinks = [
     ...links.slice(0, 3),
-    { label: 'Attend a Gathering', href: ticketUrl },
+    { label: 'WYPP Nights', href: ticketUrl },
     links[3],
   ];
 
@@ -54,7 +54,7 @@ export default function Navigation({ ticketUrl }: NavigationProps) {
         {links.map((link) => <a href={link.href} key={link.label}>{link.label}</a>)}
       </div>
 
-      <a className="navCta" href={ticketUrl}>Attend a Gathering <span className="arrowIcon" aria-hidden="true" /></a>
+      <a className="navCta" href={ticketUrl}>WYPP Nights <span className="arrowIcon" aria-hidden="true" /></a>
 
       <button
         className={`mobileMenuButton${open ? ' open' : ''}`}
