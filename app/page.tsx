@@ -75,16 +75,6 @@ export default function Home() {
         <div className="scribble" aria-hidden="true">PRAY / PRAY / PRAY / PRAY</div>
       </section>
 
-      <section className="motionMarquee" aria-label="Prayer changes everything">
-        <div className="marqueeTrack">
-          {[0, 1].map((copy) => (
-            <div className="marqueeGroup" aria-hidden={copy === 1} key={copy}>
-              <span>PRAYER CHANGES EVERYTHING</span><Spark /><span>REVIVAL STARTS HERE</span><Spark />
-            </div>
-          ))}
-        </div>
-      </section>
-
       <WyppDates />
 
       <section className="gatherings" id="gatherings">

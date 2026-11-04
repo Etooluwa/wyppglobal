@@ -87,11 +87,6 @@ h1 em { display:inline-block; }
 .textLink { display:inline-flex; gap:20px; margin-top:25px; padding-bottom:7px; border-bottom:2px solid; text-transform:uppercase; font-size:11px; font-weight:900; letter-spacing:.1em; }
 .scribble { font-size:clamp(42px,8vw,120px); line-height:1; font-weight:1000; letter-spacing:-.07em; color:transparent; -webkit-text-stroke:1px #121212; white-space:nowrap; transform:rotate(-3deg) translateY(70%); opacity:.13; }
 
-.motionMarquee { overflow:hidden; background:var(--acid); color:var(--ink); border-top:2px solid var(--ink); border-bottom:2px solid var(--ink); padding:20px 0 14px; }
-.motionMarquee .marqueeGroup { gap:42px; padding-right:42px; }
-.motionMarquee span { font-size:clamp(52px,8vw,128px); line-height:.75; letter-spacing:-.065em; font-weight:1000; white-space:nowrap; }
-.motionMarquee .sparkIcon { width:clamp(28px,4vw,62px); height:clamp(28px,4vw,62px); color:var(--orange); }
-
 .wyppDates { background:var(--ink); color:#fff; padding:clamp(90px,10vw,150px) 5vw; }
 .wyppDatesInner { width:min(1240px,100%); margin:auto; }
 .datesKicker { margin:0 0 24px; text-align:center; text-transform:uppercase; letter-spacing:.16em; font-size:9px; font-weight:900; color:#aaa; }
