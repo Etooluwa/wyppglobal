@@ -105,7 +105,8 @@ export default function Home() {
       <section className="sequence" aria-label="The rhythm of WYPP">
         <div><span>01</span><h3>GATHER</h3><p>One room. One sound. One generation seeking God.</p></div>
         <div><span>02</span><h3>ENCOUNTER</h3><p>Prayer and worship create space for lives to be transformed.</p></div>
-        <div><span>03</span><h3>CARRY</h3><p>Take the fire home. Let revival move through your city.</p></div>
+        <div><span>03</span><h3>SALVATION</h3><p>People meet Jesus, souls are saved, and new stories begin.</p></div>
+        <div><span>04</span><h3>CARRY</h3><p>Take the fire home. Let revival move through your city.</p></div>
       </section>
 
       <section className="story" id="story">

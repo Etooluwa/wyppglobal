@@ -125,11 +125,11 @@ a.dateAction:hover { color:var(--orange); }
 .statCard strong span { font-size:.4em; color:var(--orange); }
 .statCard p { max-width:220px; margin:0; line-height:1.4; }
 
-.sequence { display:grid; grid-template-columns:repeat(3,1fr); background:var(--ink); overflow:hidden; }
-.sequence>div { min-height:380px; padding:45px 4vw; border-right:1px solid #333; display:flex; flex-direction:column; justify-content:space-between; transition:background .25s,color .25s; }
+.sequence { display:grid; grid-template-columns:repeat(4,1fr); background:var(--ink); overflow:hidden; }
+.sequence>div { min-height:380px; padding:45px 3vw; border-right:1px solid #333; display:flex; flex-direction:column; justify-content:space-between; transition:background .25s,color .25s; }
 .sequence>div:hover { background:var(--acid); color:var(--ink); }
 .sequence span { font-size:10px; letter-spacing:.14em; }
-.sequence h3 { font-size:clamp(42px,5vw,78px); letter-spacing:-.06em; margin:auto 0 20px; }
+.sequence h3 { font-size:clamp(34px,4.2vw,68px); letter-spacing:-.06em; margin:auto 0 20px; }
 .sequence p { max-width:320px; color:#aaa; line-height:1.45; }
 .sequence>div:hover p { color:var(--ink); }
 
