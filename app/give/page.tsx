@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Footer from '../footer';
 import Navigation from '../navigation';
-import { ticketUrl } from '../site-links';
+import { givingUrl, ticketUrl } from '../site-links';
 
 export const metadata: Metadata = {
   title: 'Partner With WYPP | When Young People Pray',
@@ -18,7 +18,6 @@ export const metadata: Metadata = {
   },
 };
 
-const givingUrl = 'https://ppay.co/UdpNngQ1K_M';
 const partnershipUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfyxGEBiCXPRHarOzlfoOY-z8mYLWDiVe1tYnOokhLBqy4oIQ/viewform';
 
 const levels = [
