@@ -1,12 +1,12 @@
 import Motion from './motion';
+import Footer from './footer';
 import Globe from './globe';
 import HeroVideo from './hero-video';
 import Navigation from './navigation';
 import WyppDates from './wypp-dates';
+import { ticketUrl } from './site-links';
 
-const ticketUrl = 'https://www.eventbrite.com/o/when-young-people-pray-global-83494648743';
 const schoolUrl = 'https://www.eventbrite.com/cc/when-young-people-pray-north-american-tour-3377139';
-const giveUrl = 'https://pushpay.com/g/wyppnj';
 const cities = ['Toronto', 'Ottawa', 'London', 'Accra', 'Kumasi', 'Amsterdam', 'Dublin', 'Dallas', 'New Jersey', 'Boston', 'Chicago', 'Orlando', 'Brooklyn', 'Atlanta'];
 
 function Arrow() {
@@ -164,7 +164,7 @@ export default function Home() {
           <h2 data-heading>TAKE THE<br />FIRE <em>FURTHER.</em></h2>
           <div className="giveBottom">
             <p>Your generosity helps take WYPP to more cities and creates room for more young people to encounter God.</p>
-            <a className="buttonLime" href={giveUrl}>Give to WYPP <Arrow /></a>
+            <a className="buttonLime" href="/give">Give to WYPP <Arrow /></a>
           </div>
         </div>
       </section>
@@ -178,12 +178,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer>
-        <a className="footerBrand" href="#top">WYPP</a>
-        <p>When Young People Pray<br />Prayer. Revival. Global.</p>
-        <div className="footerLinks"><a href="#movement">Movement</a><a href="#gatherings">Gatherings</a><a href={giveUrl}>Give</a><a href="https://www.instagram.com/wyppglobal/">Instagram</a></div>
-        <p className="copyright">© {new Date().getFullYear()} WYPP Global</p>
-      </footer>
+      <Footer />
     </main>
   );
 }

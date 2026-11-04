@@ -1,24 +1,18 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { headerLinks } from './site-links';
 
 type NavigationProps = {
   ticketUrl: string;
 };
 
-const links = [
-  { label: 'About', href: '#movement' },
-  { label: 'Merch', href: '#merch' },
-  { label: 'Give', href: '#give' },
-  { label: 'Follow Us', href: 'https://www.instagram.com/wyppglobal/' },
-];
-
 export default function Navigation({ ticketUrl }: NavigationProps) {
   const [open, setOpen] = useState(false);
   const mobileLinks = [
-    ...links.slice(0, 3),
+    ...headerLinks.slice(0, 3),
     { label: 'WYPP Nights', href: ticketUrl },
-    links[3],
+    headerLinks[3],
   ];
 
   useEffect(() => {
@@ -48,10 +42,10 @@ export default function Navigation({ ticketUrl }: NavigationProps) {
 
   return (
     <nav className={`nav${open ? ' menuOpen' : ''}`} aria-label="Primary navigation">
-      <a className="brand" href="#top" aria-label="WYPP home" onClick={closeMenu}>WYPP<span>®</span></a>
+      <a className="brand" href="/#top" aria-label="WYPP home" onClick={closeMenu}>WYPP<span>®</span></a>
 
       <div className="navLinks">
-        {links.map((link) => <a href={link.href} key={link.label}>{link.label}</a>)}
+        {headerLinks.map((link) => <a href={link.href} key={link.label}>{link.label}</a>)}
       </div>
 
       <a className="navCta" href={ticketUrl}>WYPP Nights <span className="arrowIcon" aria-hidden="true" /></a>
