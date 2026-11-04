@@ -5,7 +5,7 @@ export const givingUrl = 'https://ppay.co/UdpNngQ1K_M';
 export const headerLinks = [
   { label: 'About', href: '/#movement' },
   { label: 'Merch', href: '/#merch' },
-  { label: 'Give', href: givingUrl },
+  { label: 'Give', href: '/give' },
   { label: 'Follow Us', href: instagramUrl },
 ];
 
