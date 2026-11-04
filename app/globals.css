@@ -92,6 +92,23 @@ h1 em { display:inline-block; }
 .motionMarquee span { font-size:clamp(52px,8vw,128px); line-height:.75; letter-spacing:-.065em; font-weight:1000; white-space:nowrap; }
 .motionMarquee .sparkIcon { width:clamp(28px,4vw,62px); height:clamp(28px,4vw,62px); color:var(--orange); }
 
+.wyppDates { background:var(--ink); color:#fff; padding:clamp(90px,10vw,150px) 5vw; }
+.wyppDatesInner { width:min(1240px,100%); margin:auto; }
+.datesKicker { margin:0 0 24px; text-align:center; text-transform:uppercase; letter-spacing:.16em; font-size:9px; font-weight:900; color:#aaa; }
+.wyppDates h2 { margin:0; text-align:center; text-transform:uppercase; font-size:clamp(58px,8vw,124px); line-height:.82; letter-spacing:-.07em; }
+.wyppDates h2 em { color:var(--orange); font-style:normal; }
+.datesList { margin:clamp(65px,8vw,110px) 0 0; padding:0; list-style:none; }
+.dateRow { position:relative; display:grid; grid-template-columns:minmax(190px,.72fr) minmax(300px,1.4fr) auto; align-items:center; gap:18px; min-height:74px; text-transform:uppercase; overflow:hidden; }
+.dateRow:before { content:""; position:absolute; left:0; right:0; top:50%; border-top:2px dotted #5b5b5b; }
+.dateRow>* { position:relative; z-index:1; width:max-content; max-width:100%; background:var(--ink); }
+.dateRow time { padding-right:18px; font-size:clamp(14px,1.35vw,20px); font-weight:800; }
+.dateRow strong { padding:0 18px; font-size:clamp(19px,2vw,31px); letter-spacing:-.035em; }
+.dateAction { justify-self:end; display:inline-flex; align-items:center; gap:16px; padding-left:18px; text-transform:uppercase; letter-spacing:.08em; font-size:11px; font-weight:900; }
+a.dateAction:hover { color:var(--orange); }
+.dateRow.passed { color:#777; }
+.dateRow.passed>* { text-decoration:line-through; text-decoration-thickness:2px; }
+.dateRow.passed:after { content:""; position:absolute; z-index:2; left:0; right:0; top:50%; height:2px; background:#777; transform:translateY(-50%); pointer-events:none; }
+
 .gatherings { background:var(--orange); color:var(--ink); padding:clamp(80px,10vw,150px) 5vw; }
 .gatheringIntro { display:grid; grid-template-columns:1.5fr .6fr; gap:8vw; align-items:end; }
 .gatherings .sectionTag { margin-bottom:90px; }
@@ -237,6 +254,14 @@ footer p { color:#a8a8a8; line-height:1.5; margin:0; }
   .globeJourney { height:64vh; min-height:430px; }
   .globeTopline,.globeLegend { font-size:8px; letter-spacing:.1em; }
   .manifesto h2,.gatherings h2,.story h2,.school h2,.merch h2,.give h2,.connect h2 { font-size:clamp(52px,16vw,88px); }
+  .wyppDates { padding:78px 24px; }
+  .wyppDates h2 { font-size:clamp(52px,15vw,76px); }
+  .datesList { margin-top:58px; }
+  .dateRow { grid-template-columns:1fr auto; gap:5px 16px; min-height:88px; }
+  .dateRow time { grid-column:1; grid-row:1; padding:0 12px 0 0; font-size:10px; letter-spacing:.08em; }
+  .dateRow strong { grid-column:1; grid-row:2; padding:0 12px 0 0; font-size:clamp(22px,7vw,32px); }
+  .dateAction { grid-column:2; grid-row:1/3; padding-left:12px; font-size:9px; }
+  .dateAction .arrowIcon { display:none; }
   .photoCard,.photoCard.wide { min-height:430px; }
   .photoCard.tall { min-height:520px; }
   .photoCard figcaption { align-items:start; flex-direction:column; gap:10px; }

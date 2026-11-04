@@ -2,6 +2,7 @@ import Motion from './motion';
 import Globe from './globe';
 import HeroVideo from './hero-video';
 import Navigation from './navigation';
+import WyppDates from './wypp-dates';
 
 const ticketUrl = 'https://www.eventbrite.com/o/when-young-people-pray-global-83494648743';
 const schoolUrl = 'https://www.eventbrite.com/cc/when-young-people-pray-north-american-tour-3377139';
@@ -83,6 +84,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <WyppDates ticketUrl={ticketUrl} />
 
       <section className="gatherings" id="gatherings">
         <div className="gatheringIntro">
