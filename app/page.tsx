@@ -98,7 +98,10 @@ export default function Home() {
             <img src="/images/prayer-connect.jpg" alt="A speaker addressing a WYPP gathering" />
             <figcaption><strong>Revival</strong><span>City by city. Heart by heart.</span></figcaption>
           </figure>
-          <div className="statCard" data-reveal><strong>15<span>+</span></strong><p>Cities connected by prayer and a shared hunger for revival.</p></div>
+          <div className="statCard" data-reveal>
+            <div className="statItem"><strong>15<span>+</span></strong><p>Cities connected by prayer and a shared hunger for revival.</p></div>
+            <div className="statItem"><strong>25K<span>+</span></strong><p>Over 25,000 people have encountered revival at WYPP meetings.</p></div>
+          </div>
         </div>
       </section>
 

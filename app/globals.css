@@ -120,10 +120,12 @@ a.dateAction:hover { color:var(--orange); }
 .photoCard figcaption { position:absolute; z-index:2; left:28px; right:28px; bottom:25px; display:flex; align-items:end; justify-content:space-between; }
 .photoCard strong { text-transform:uppercase; font-size:clamp(32px,4vw,64px); line-height:.9; letter-spacing:-.06em; }
 .photoCard span { font-size:10px; text-transform:uppercase; letter-spacing:.12em; }
-.statCard { min-height:270px; background:var(--acid); padding:35px; display:flex; align-items:end; justify-content:space-between; }
-.statCard strong { font-size:clamp(90px,11vw,170px); line-height:.7; letter-spacing:-.09em; }
+.statCard { min-height:300px; background:var(--acid); display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+.statItem { min-height:inherit; padding:32px; display:flex; flex-direction:column; justify-content:space-between; }
+.statItem + .statItem { border-left:1px solid #09090933; }
+.statCard strong { font-size:clamp(58px,7vw,105px); line-height:.72; letter-spacing:-.09em; }
 .statCard strong span { font-size:.4em; color:var(--orange); }
-.statCard p { max-width:220px; margin:0; line-height:1.4; }
+.statCard p { max-width:240px; margin:0; line-height:1.4; }
 
 .sequence { display:grid; grid-template-columns:repeat(4,1fr); background:var(--ink); overflow:hidden; }
 .sequence>div { min-height:380px; padding:45px 3vw; border-right:1px solid #333; display:flex; flex-direction:column; justify-content:space-between; transition:background .25s,color .25s; }
@@ -304,7 +306,9 @@ footer p { color:#a8a8a8; line-height:1.5; margin:0; }
   .photoCard,.photoCard.wide { min-height:430px; }
   .photoCard.tall { min-height:520px; }
   .photoCard figcaption { align-items:start; flex-direction:column; gap:10px; }
-  .statCard { align-items:start; flex-direction:column; }
+  .statCard { grid-template-columns:1fr; }
+  .statItem { min-height:220px; }
+  .statItem + .statItem { border-left:0; border-top:1px solid #09090933; }
   .hostGrid { grid-template-columns:1fr; }
   .hostCard.offset { margin-top:60px; }
   .merchPhoto { min-height:440px; }
