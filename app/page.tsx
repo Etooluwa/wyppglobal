@@ -121,16 +121,16 @@ export default function Home() {
         </div>
         <div className="hostGrid">
           <article className="hostCard">
-            <div className="hostImage"><img src="/images/host-kofi.jpg" alt="Pastor Kofi Dartey speaking" /><span>01 / 02</span></div>
+            <div className="hostImage"><img src="/images/host-kofi.jpg" alt="Dr. Kofi Dartey speaking" /><span>01 / 02</span></div>
             <p className="role">Host</p>
-            <h3>Pastor Kofi Dartey</h3>
+            <h3>Dr. Kofi Dartey</h3>
             <p>Founder and Head Pastor of Campus Rush, a global movement transforming lives and raising leaders on campuses and in cities.</p>
             <a href="https://www.instagram.com/kofi_dartey/">@kofi_dartey <Arrow /></a>
           </article>
           <article className="hostCard offset">
-            <div className="hostImage"><img src="/images/host-ralph.jpg" alt="Prophet Ralph Dartey speaking" /><span>02 / 02</span></div>
+            <div className="hostImage"><img src="/images/host-ralph.jpg" alt="Dr. Ralph Dartey II speaking" /><span>02 / 02</span></div>
             <p className="role">Host</p>
-            <h3>Prophet Ralph Dartey</h3>
+            <h3>Dr. Ralph Dartey II</h3>
             <p>Head Pastor of Bridge Youth, Assistant Head Pastor of Campus Rush, and CEO of Minstrel Records.</p>
             <a href="https://www.instagram.com/ralphdarteyii/">@ralphdarteyii <Arrow /></a>
           </article>
