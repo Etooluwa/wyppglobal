@@ -4,16 +4,16 @@ import Navigation from '../navigation';
 import { givingUrl, ticketUrl } from '../site-links';
 
 export const metadata: Metadata = {
-  title: 'Partner With WYPP | When Young People Pray',
-  description: 'Take the fire further by becoming a WYPP Global Partner.',
+  title: 'A Dollar a Day for Revival | WYPP',
+  description: 'Join the recurring giving campaign helping WYPP carry revival into more cities.',
   openGraph: {
-    title: 'Partner With WYPP',
-    description: 'Take the fire further by becoming a WYPP Global Partner.',
+    title: 'A Dollar a Day for Revival | WYPP',
+    description: 'Join the recurring giving campaign helping WYPP carry revival into more cities.',
     images: [],
   },
   twitter: {
-    title: 'Partner With WYPP',
-    description: 'Take the fire further by becoming a WYPP Global Partner.',
+    title: 'A Dollar a Day for Revival | WYPP',
+    description: 'Join the recurring giving campaign helping WYPP carry revival into more cities.',
     images: [],
   },
 };
@@ -21,10 +21,9 @@ export const metadata: Metadata = {
 const partnershipUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfyxGEBiCXPRHarOzlfoOY-z8mYLWDiVe1tYnOokhLBqy4oIQ/viewform';
 
 const levels = [
-  { name: 'Platinum', annual: '$1,000', weekly: '$19.23', biweekly: '$38.46', monthly: '$83.33', twiceMonthly: '$41.67' },
-  { name: 'Gold', annual: '$500', weekly: '$9.62', biweekly: '$19.23', monthly: '$41.67', twiceMonthly: '$20.83' },
-  { name: 'Silver', annual: '$250', weekly: '$4.81', biweekly: '$9.62', monthly: '$20.83', twiceMonthly: '$10.42' },
-  { name: 'Bronze', annual: '$100', weekly: '$1.92', biweekly: '$3.85', monthly: '$8.33', twiceMonthly: '$4.17' },
+  { name: 'A dollar a day', daily: '$1', monthly: '$30', copy: 'A simple daily commitment that becomes a steady monthly investment in revival.' },
+  { name: 'Two dollars a day', daily: '$2', monthly: '$60', copy: 'Help create more room for young people to encounter Jesus through WYPP.' },
+  { name: 'Five dollars a day', daily: '$5', monthly: '$150', copy: 'Carry the vision further as WYPP reaches new people, campuses, and cities.' },
 ];
 
 function Arrow() {
@@ -38,27 +37,25 @@ export default function GivePage() {
         <Navigation ticketUrl={ticketUrl} />
         <div className="simpleGivingInner">
           <header className="simpleGivingHero">
-            <p className="simpleGivingKicker">Partner with WYPP</p>
-            <h1>TAKE THE<br />FIRE <em>FURTHER.</em></h1>
-            <p>Your generosity helps take WYPP to more cities and creates room for more young people to encounter God.</p>
+            <p className="simpleGivingKicker">The WYPP giving campaign</p>
+            <h1>A DOLLAR A DAY<br /><em>FOR REVIVAL.</em></h1>
+            <p>Make revival part of your rhythm. Your recurring gift helps WYPP create spaces where young people pray, meet Jesus, and carry the fire into their cities.</p>
           </header>
 
           <section className="compactGivingSection" aria-labelledby="partner-levels-title">
             <div className="compactSectionHeading">
-              <h2 id="partner-levels-title">Choose your level</h2>
-              <p>Give the yearly amount at once, or spread it across the year. Amounts are rounded to the cent.</p>
+              <h2 id="partner-levels-title">Choose your recurring level</h2>
+              <p>Choose the daily commitment that fits you. Your gift will be set up as the matching monthly amount.</p>
             </div>
-            <div className="partnerTable">
+            <div className="campaignTiers">
               {levels.map((level) => (
-                <article className="partnerRow" key={level.name}>
-                  <div className="partnerLevel"><strong>{level.name} partner</strong><p>{level.annual}<small>A year</small></p></div>
-                  <div><strong>{level.weekly}</strong><span>Every week</span></div>
-                  <div><strong>{level.biweekly}</strong><span>Every 2 weeks</span></div>
-                  <div><strong>{level.monthly}</strong><span>Every month</span></div>
-                  <div><strong>{level.twiceMonthly}</strong><span>1st &amp; 15th monthly</span></div>
+                <article className="campaignTier" key={level.name}>
+                  <p className="campaignDaily">{level.daily}<span> / day</span></p>
+                  <h3>{level.name}<br />for revival</h3>
+                  <p className="campaignMonthly">{level.monthly}<span> every month</span></p>
+                  <p className="campaignCopy">{level.copy}</p>
                 </article>
               ))}
-              <div className="otherAmountRow"><strong>Other amount</strong><p>Every gift matters. Enter any amount on the giving page.</p></div>
             </div>
           </section>
 
@@ -68,15 +65,18 @@ export default function GivePage() {
               <p>Open our secure giving page and follow these steps.</p>
             </div>
             <ol className="compactSteps">
-              <li><span>01</span><p>Choose <strong>Set up recurring</strong> or <strong>Give one time</strong>.</p></li>
-              <li><span>02</span><p>Enter the amount for your level and pick how often you want to give.</p></li>
+              <li><span>01</span><p>Open Pushpay and choose <strong>Set up recurring</strong>.</p></li>
+              <li><span>02</span><p>Enter <strong>$30, $60, or $150</strong> and select monthly giving.</p></li>
               <li><span>03</span><p>Under <strong>Campus</strong>, choose <strong>WHEN YOUNG PEOPLE PRAY</strong>. The fund is already set to WYPP Global Partners.</p></li>
               <li><span>04</span><p>Confirm your start date and payment method, then select <strong>Next</strong>.</p></li>
             </ol>
-            <a className="givingPrimaryButton" href={givingUrl}>Give to WYPP <Arrow /></a>
+            <div className="givingActions">
+              <a className="givingPrimaryButton" href={givingUrl}>Give through Pushpay <Arrow /></a>
+              <a className="givingSecondaryButton" href={partnershipUrl}>Complete the partner form <Arrow /></a>
+            </div>
             <div className="givingNotes">
               <p>Prefer a single gift? Choose <strong>Give one time</strong> on the same page.</p>
-              <p>Partnering with WYPP? Complete the <a href={partnershipUrl}>partnership form <Arrow /></a>.</p>
+              <p>Want to give another amount? Enter any amount directly on the Pushpay page.</p>
             </div>
           </section>
 
@@ -88,10 +88,10 @@ export default function GivePage() {
 
           <section className="compactFaq">
             <h2>Good to know</h2>
-            <details open><summary>How do the levels work?</summary><p>Each level is a yearly commitment. Choose a level, pick how often you want to give, and enter the matching amount. Because amounts are rounded to the cent, your yearly total may differ by a few cents.</p></details>
+            <details open><summary>How do the levels work?</summary><p>Choose a daily commitment of $1, $2, or $5. On Pushpay, set up the matching recurring monthly gift of $30, $60, or $150.</p></details>
             <details><summary>Can I change or stop my gift?</summary><p>Yes. Sign in to your giving account to change the amount, update your payment method, or stop your recurring gift.</p></details>
             <details><summary>Can I give just once?</summary><p>Yes. Choose Give one time instead of Set up recurring.</p></details>
-            <details><summary>How often can I give?</summary><p>Every week, every two weeks, every month, or on the 1st and 15th. You can also give one time.</p></details>
+            <details><summary>Can I give a different amount?</summary><p>Yes. Every gift matters, and you can enter any amount on the Pushpay page.</p></details>
           </section>
         </div>
       </section>

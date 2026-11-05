@@ -216,6 +216,19 @@ footer p { color:#a8a8a8; line-height:1.5; margin:0; }
 .compactSteps p { margin:0; font-size:18px; line-height:1.5; }
 .givingPrimaryButton { width:max-content; margin-top:42px; padding:20px 24px; display:inline-flex; align-items:center; gap:42px; background:var(--orange); color:#fff; text-transform:uppercase; letter-spacing:.1em; font-size:11px; font-weight:900; transition:transform .2s,background .2s; }
 .givingPrimaryButton:hover { transform:translateY(-3px); background:#ff6a28; }
+.campaignTiers { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-bottom:1px solid #444; }
+.campaignTier { min-height:410px; padding:36px 30px 34px; border-right:1px solid #444; display:flex; flex-direction:column; }
+.campaignTier:last-child { border-right:0; }
+.campaignDaily { margin:0 0 54px; color:var(--orange); font-size:clamp(54px,5.5vw,82px); line-height:.8; font-weight:1000; letter-spacing:-.06em; }
+.campaignDaily span { font-size:12px; letter-spacing:.04em; text-transform:uppercase; }
+.campaignTier h3 { margin:0; font-size:clamp(25px,2.4vw,38px); line-height:.94; letter-spacing:-.045em; text-transform:uppercase; }
+.campaignMonthly { margin:26px 0 0; font-size:22px; font-weight:900; }
+.campaignMonthly span { color:#aaa; font-size:11px; font-weight:500; letter-spacing:.08em; text-transform:uppercase; }
+.campaignCopy { margin:auto 0 0; padding-top:36px; color:#aaa; font-size:14px; line-height:1.5; }
+.givingActions { display:flex; flex-wrap:wrap; gap:14px; align-items:center; margin-top:42px; }
+.givingActions .givingPrimaryButton { margin-top:0; }
+.givingSecondaryButton { padding:19px 24px; display:inline-flex; align-items:center; gap:42px; border:1px solid #666; color:#fff; text-transform:uppercase; letter-spacing:.1em; font-size:11px; font-weight:900; transition:transform .2s,border-color .2s; }
+.givingSecondaryButton:hover { transform:translateY(-3px); border-color:#fff; }
 .givingNotes { margin-top:24px; color:#aaa; line-height:1.5; }
 .givingNotes p { margin:8px 0; }
 .givingNotes a { color:#fff; display:inline-flex; align-items:center; gap:8px; border-bottom:1px solid; }
@@ -341,6 +354,12 @@ footer p { color:#a8a8a8; line-height:1.5; margin:0; }
   .compactSteps li { grid-template-columns:38px 1fr; gap:12px; }
   .compactSteps p { font-size:16px; }
   .givingPrimaryButton { width:100%; justify-content:space-between; }
+  .campaignTiers { grid-template-columns:1fr; }
+  .campaignTier { min-height:330px; padding:32px 0; border-right:0; border-bottom:1px solid #444; }
+  .campaignTier:last-child { border-bottom:0; }
+  .campaignDaily { margin-bottom:36px; }
+  .givingActions { align-items:stretch; flex-direction:column; }
+  .givingActions a { width:100%; justify-content:space-between; }
   .compactAssurance { grid-template-columns:1fr; gap:0; padding:0; }
   .compactAssurance>div { padding:24px 0; border-bottom:1px solid #444; }
   .compactAssurance>div:last-child { border-bottom:0; }

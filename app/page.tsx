@@ -164,11 +164,11 @@ export default function Home() {
         <div className="givePhoto" role="img" aria-label="WYPP leaders praying with young adults" />
         <div className="giveOverlay" />
         <div className="giveContent">
-          <div className="sectionTag light" data-reveal><span>06</span> Partner with WYPP</div>
-          <h2 data-heading>TAKE THE<br />FIRE <em>FURTHER.</em></h2>
+          <div className="sectionTag light" data-reveal><span>06</span> The giving campaign</div>
+          <h2 data-heading>A DOLLAR A DAY<br /><em>FOR REVIVAL.</em></h2>
           <div className="giveBottom">
-            <p>Your generosity helps take WYPP to more cities and creates room for more young people to encounter God.</p>
-            <a className="buttonLime" href="/give">Give to WYPP <Arrow /></a>
+            <p>Set up a recurring gift and help WYPP carry prayer, salvation, and revival into more cities.</p>
+            <a className="buttonLime" href="/give">Choose your level <Arrow /></a>
           </div>
         </div>
       </section>
