@@ -11,6 +11,6 @@ export const headerLinks = [
 
 export const footerLinks = [
   ...headerLinks.slice(0, 3),
-  { label: 'WYPP Nights', href: ticketUrl },
+  { label: 'WYPP Tour', href: ticketUrl },
   headerLinks[3],
 ];
