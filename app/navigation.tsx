@@ -10,9 +10,9 @@ type NavigationProps = {
 export default function Navigation({ ticketUrl }: NavigationProps) {
   const [open, setOpen] = useState(false);
   const mobileLinks = [
-    ...headerLinks.slice(0, 3),
+    ...headerLinks.slice(0, 4),
     { label: 'WYPP Tour', href: ticketUrl },
-    headerLinks[3],
+    headerLinks[4],
   ];
 
   useEffect(() => {

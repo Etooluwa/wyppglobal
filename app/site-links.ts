@@ -6,11 +6,12 @@ export const headerLinks = [
   { label: 'About', href: '/#movement' },
   { label: 'Merch', href: '/#merch' },
   { label: 'Give', href: '/give' },
+  { label: 'Conference', href: '/conference' },
   { label: 'Follow Us', href: instagramUrl },
 ];
 
 export const footerLinks = [
-  ...headerLinks.slice(0, 3),
+  ...headerLinks.slice(0, 4),
   { label: 'WYPP Tour', href: ticketUrl },
-  headerLinks[3],
+  headerLinks[4],
 ];
