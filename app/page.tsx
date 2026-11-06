@@ -141,9 +141,9 @@ export default function Home() {
         <div className="schoolMark" aria-hidden="true">+</div>
         <div className="sectionTag light" data-reveal><span>04</span> Beyond the gathering</div>
         <div className="schoolGrid">
-          <h2 data-heading>SCHOOL OF<br /><em>MINISTRY.</em></h2>
+          <h2 data-heading>SCHOOL OF<br /><em>PRAYER.</em></h2>
           <div data-reveal>
-            <p>A practical workshop for young leaders who want to grow in ministry, leadership, and their walk with God.</p>
+            <p>A space where young people are trained and equipped to build a strong prayer life, grow in intercession, and pray with faith and understanding.</p>
             <a className="buttonLime" href={schoolUrl}>Register now <Arrow /></a>
           </div>
         </div>
