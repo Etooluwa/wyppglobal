@@ -365,10 +365,18 @@ footer p { color:#a8a8a8; line-height:1.5; margin:0; }
   .compactAssurance>div:last-child { border-bottom:0; }
   .conferenceHero:before { width:115vw; right:-55vw; top:17vh; opacity:.65; }
   .conferenceHero:after { bottom:.02em; font-size:62vw; }
-  .conferenceInner { min-height:calc(100svh - 76px); padding:58px 24px 34px; gap:70px; }
-  .conferenceTitle { font-size:clamp(72px,23vw,126px); }
+  .conferenceInner { min-height:calc(100svh - 76px); padding:48px 24px 34px; gap:44px; }
+  .conferenceTitle { font-size:clamp(72px,23vw,126px); line-height:.72; }
+  .conferenceTitle em { margin-top:14px; font-size:.58em; line-height:1; letter-spacing:-.065em; white-space:nowrap; }
   .conferenceSoon { grid-template-columns:1fr; gap:22px; }
   .conferenceSoon p { justify-self:start; }
+}
+
+@media (max-width:380px) {
+  .conferenceInner { padding-top:34px; gap:30px; }
+  .conferenceTitle { font-size:clamp(66px,22vw,84px); }
+  .conferenceSoon { gap:14px; padding-top:18px; }
+  .conferenceSoon strong { font-size:28px; }
 }
 
 @media (prefers-reduced-motion:reduce) {
